@@ -181,7 +181,7 @@ header {
 }
 .container-image img {
   width: 640px;
-  height: auto;
+  /* height: auto; */
 }
 .btn-10years {
   width: 200px;
@@ -233,6 +233,12 @@ header {
   padding: 20px;
   width: 150px;
   height: auto;
+  transition: all 0.3s;
+}
+.icon:hover {
+  transform: translateY(-10px);
+  background-color: #ff900e;
+  color: #fff;
 }
 .icon h4 {
   font-size: 28px;
@@ -278,4 +284,27 @@ footer p {
   font-weight: 600;
   color: #727272;
   padding: 20px;
+}
+@media screen and (max-width: 668px) {
+  .navbar,
+  .banner,
+  .hero,
+  .services,
+  .container,
+  .icons,
+  .logos {
+    flex-direction: column;
+    padding: 10px;
+  }
+  .image img,
+  .container-image img {
+    width: 100%;
+  }
+  .hero-img {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  footer {
+    width: 100%;
+    margin: auto !important;
+  }
 }
